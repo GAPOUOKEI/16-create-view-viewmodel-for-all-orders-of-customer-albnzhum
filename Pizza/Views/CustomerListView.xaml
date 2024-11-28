@@ -10,7 +10,7 @@
 
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
-            <i:InvokeCommandAction Command="{Binding LoadCustomers}"/>
+            <i:InvokeCommandAction Command="{Binding LoadCustomersCommand}"/>
         </i:EventTrigger>
     </i:Interaction.Triggers>
     
@@ -57,9 +57,10 @@
                         <DataTemplate>
                             <Button Content="оформить заказ"
                                     Command="{Binding DataContext.PlaceOrderCommand,
-                                        RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                          RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
                                     CommandParameter="{Binding}"
                                     Margin="5"/>
+
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -69,6 +70,18 @@
                         <DataTemplate>
                             <Button Content="редактировать"
                                     Command="{Binding DataContext.EditCustomerCommand,
+                                        RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                    CommandParameter="{Binding}"
+                                    Margin="5"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="посмотреть заказы"
+                                    Command="{Binding DataContext.GetAllOrdersCommand,
                                         RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
                                     CommandParameter="{Binding}"
                                     Margin="5"/>

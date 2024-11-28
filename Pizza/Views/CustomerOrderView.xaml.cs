@@ -18,9 +18,9 @@ namespace Pizza.Views
     /// <summary>
     /// Логика взаимодействия для OrderView.xaml
     /// </summary>
-    public partial class OrderView : UserControl
+    public partial class CustomerOrderView : UserControl
     {
-        public OrderView()
+        public CustomerOrderView()
         {
             InitializeComponent();
         }
