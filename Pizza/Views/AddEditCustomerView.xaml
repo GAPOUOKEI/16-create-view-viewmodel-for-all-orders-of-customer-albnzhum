@@ -28,6 +28,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <Grid Name="CustomerGrid" Grid.Row="0"
@@ -116,6 +117,12 @@
             
             
         </Grid>
-
+        <Grid Name="CommandButtonsGrid2" Grid.Row="2"
+              Margin="10">
+            <Button Content="отмена"
+                    Command="{Binding CancelCommand}"
+                    MaxWidth="250"/>
+        </Grid>
+        
     </Grid>
 </UserControl>

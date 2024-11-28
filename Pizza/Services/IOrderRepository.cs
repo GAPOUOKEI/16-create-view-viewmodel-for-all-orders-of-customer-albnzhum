@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pizza.Services
 {
-    internal interface IOrderRepository
+    public interface IOrderRepository
     {
         //получить список заказов конкретного клиента
         Task<List<Order>> GetOrdersByCustomerAsync(Guid customerId);

@@ -12,17 +12,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Pizza.Services;
+using Pizza.ViewModels;
 
 namespace Pizza.Views
 {
     /// <summary>
     /// Логика взаимодействия для OrderPrepView.xaml
     /// </summary>
-    public partial class OrderPrepView : UserControl
+    public partial class AddEditOrderView : UserControl
     {
-        public OrderPrepView()
+        private readonly AddEditOrderViewModel _viewModel;
+
+        public AddEditOrderView()
         {
             InitializeComponent();
+           /* _viewModel = new AddEditOrderViewModel(orderRepository);
+            DataContext = _viewModel;*/
+
+            // Load customers
+            //_viewModel.LoadCustomers(customerRepository);
         }
     }
 }

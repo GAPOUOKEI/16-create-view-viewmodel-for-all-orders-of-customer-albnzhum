@@ -16,11 +16,11 @@
         <DataTemplate DataType="{x:Type viewModels:CustomerListViewModel}">
             <views:CustomerListView/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewModels:OrderPerpViewModel}">
-            <views:OrderPrepView/>
+        <DataTemplate DataType="{x:Type viewModels:AddEditOrderViewModel}">
+            <views:AddEditOrderView/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewModels:OrderViewModer}">
-            <views:OrderView/>
+        <DataTemplate DataType="{x:Type viewModels:CustomerOrdersViewModel}">
+            <views:CustomerOrderView/>
         </DataTemplate>
     </Window.Resources>
 
